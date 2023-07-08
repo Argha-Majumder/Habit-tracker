@@ -1,0 +1,298 @@
+#show-home {
+    position: relative;
+    top: 50px;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    #btn {
+        margin-top: 25px;
+        border: 2px solid #249c03;
+        height: 50px;
+        width: 200px;
+        font-size: larger;
+        color: white;
+        background-color: #249c03;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: #249c03;
+        }
+    }
+    #myForm {
+        display: none;
+        position: fixed;
+        background-color: white;
+        top: 5%;
+        left: 30%;
+        height: 300px;
+        width: 600px;
+        overflow: hidden;
+        border: 1px solid black;
+        #habit-display {
+            padding: 0 1.7rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            div {
+                span {
+                    position: relative;
+                    top: 33%;
+                }
+            }
+            h3 {
+                color: #249c03;
+            }
+        }
+        #close-span {
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        #form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .form-values {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1px solid gray;
+            width: 90%;
+            height: 20%;
+            margin: 5px;
+            background-color: white;
+            text-align: left;
+            color: gray;
+            div {
+                margin-top: 0.5em;
+                margin-left: 0.8em;
+                font-size: large;
+            }
+            input {
+                margin-left: 0.8em;
+                outline: none;
+                border: white;
+                width: 90%;
+                height: 28px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+            }
+            &:focus-within {
+                div {
+                    color: #249c03;
+                }
+                border: 2px solid #249c03;
+            }
+        }
+        #button-div {
+            border: none;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            height: 5rem;
+            div { 
+                button {
+                    height: 3rem;
+                    width: 10rem;
+                    border: 1px solid #249c03;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5em;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                #cancel-button {
+                    background-color: white;
+                    color: #249c03;
+                    &:hover {
+                        background-color: #249c03;
+                        color: white;
+                    }
+                }
+                #save-button {
+                    background-color: #249c03;
+                    color: white;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    #change-view {
+        position: absolute;
+        margin-top: 30px;
+        left: 15%;
+        height: 3rem;
+        width: 10rem;
+        color: white;
+        background-color: #249c03;
+        border: 1px solid #249c03;
+        font-size: large;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: #249c03;
+        }
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        position: relative;
+        left: 10%;
+        .habit-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .menu {
+                a {
+                    position: relative;
+                    top: 90%;
+                }
+            }
+        }
+    }
+    .daily-view {
+        display: none;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      
+        .habit-title {
+          h2 {
+            margin: 0;
+            position: relative;
+            top: 1rem;
+            font-size: 20px;
+          }
+        }
+      
+        .habit-container {
+          margin-top: 10px;
+            width: 90%;
+          .mark-status-daily {
+            font-size: 2rem;
+            color: #888;
+          }
+      
+          .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 10%;
+            a {
+                position: relative;
+                top: 0.25rem;
+            }
+            a:hover {
+                cursor: pointer;
+            }
+            .edit-form {
+                display: none;
+                position: fixed;
+                background-color: white;
+                top: 5%;
+                left: 30%;
+                height: 300px;
+                width: 600px;
+                overflow: hidden;
+                border: 1px solid black;
+                #habit-display {
+                    padding: 0 1.7rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    div {
+                        span {
+                            position: relative;
+                            top: 33%;
+                        }
+                    }
+                    h3 {
+                        color: #249c03;
+                    }
+                }
+                #close-span {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+        
+                #form-container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+                .form-values {
+                    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                    border: 1px solid gray;
+                    width: 90%;
+                    height: 20%;
+                    margin: 5px;
+                    background-color: white;
+                    text-align: left;
+                    color: gray;
+                    div {
+                        margin-top: 0.5em;
+                        margin-left: 0.8em;
+                        font-size: large;
+                    }
+                    input {
+                        margin-left: 0.8em;
+                        outline: none;
+                        border: white;
+                        width: 90%;
+                        height: 28px;
+                        margin-top: 5px;
+                        margin-bottom: 10px;
+                    }
+                    &:focus-within {
+                        div {
+                            color: #249c03;
+                        }
+                        border: 2px solid #249c03;
+                    }
+                }
+                #button-div {
+                    border: none;
+                    margin-top: 2rem;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    height: 5rem;
+                    div { 
+                        button {
+                            height: 3rem;
+                            width: 10rem;
+                            border: 1px solid #249c03;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5em;
+                            &:hover {
+                                cursor: pointer;
+                            }
+                        }
+                        #cancel-button {
+                            background-color: white;
+                            color: #249c03;
+                            &:hover {
+                                background-color: #249c03;
+                                color: white;
+                            }
+                        }
+                        #save-button {
+                            background-color: #249c03;
+                            color: white;
+                            &:hover {
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+          }
+        }
+    }
+}

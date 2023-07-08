@@ -1,0 +1,38 @@
+header {
+  background-color: orange;
+  height: 15%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  header #name {
+    margin-left: 20px; }
+    header #name img {
+      height: 50px; }
+  header .action-button {
+    position: absolute;
+    right: 100px; }
+    header .action-button ul {
+      list-style: none; }
+      header .action-button ul li {
+        display: inline;
+        font-size: 25px;
+        margin: 0 10px; }
+        header .action-button ul li a {
+          color: white;
+          text-decoration: none; }
+      header .action-button ul #sign-out-button {
+        background-color: #a09c9c;
+        padding: 10px;
+        font-size: 12px; }
+        header .action-button ul #sign-out-button:hover {
+          background-color: red;
+          cursor: pointer; }
+      header .action-button ul .sign-up-button {
+        background-color: #a09c9c;
+        padding: 10px;
+        font-size: 1rem; }
+        header .action-button ul .sign-up-button:hover {
+          background-color: green;
+          cursor: pointer; }

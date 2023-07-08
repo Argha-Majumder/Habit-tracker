@@ -1,0 +1,226 @@
+#show-home {
+  position: relative;
+  top: 50px;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; }
+  #show-home #btn {
+    margin-top: 25px;
+    border: 2px solid #249c03;
+    height: 50px;
+    width: 200px;
+    font-size: larger;
+    color: white;
+    background-color: #249c03; }
+    #show-home #btn:hover {
+      cursor: pointer;
+      background-color: white;
+      color: #249c03; }
+  #show-home #myForm {
+    display: none;
+    position: fixed;
+    background-color: white;
+    top: 5%;
+    left: 30%;
+    height: 300px;
+    width: 600px;
+    overflow: hidden;
+    border: 1px solid black; }
+    #show-home #myForm #habit-display {
+      padding: 0 1.7rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #show-home #myForm #habit-display div span {
+        position: relative;
+        top: 33%; }
+      #show-home #myForm #habit-display h3 {
+        color: #249c03; }
+    #show-home #myForm #close-span:hover {
+      cursor: pointer; }
+    #show-home #myForm #form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+    #show-home #myForm .form-values {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      border: 1px solid gray;
+      width: 90%;
+      height: 20%;
+      margin: 5px;
+      background-color: white;
+      text-align: left;
+      color: gray; }
+      #show-home #myForm .form-values div {
+        margin-top: 0.5em;
+        margin-left: 0.8em;
+        font-size: large; }
+      #show-home #myForm .form-values input {
+        margin-left: 0.8em;
+        outline: none;
+        border: white;
+        width: 90%;
+        height: 28px;
+        margin-top: 5px;
+        margin-bottom: 10px; }
+      #show-home #myForm .form-values:focus-within {
+        border: 2px solid #249c03; }
+        #show-home #myForm .form-values:focus-within div {
+          color: #249c03; }
+    #show-home #myForm #button-div {
+      border: none;
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: end;
+      height: 5rem; }
+      #show-home #myForm #button-div div button {
+        height: 3rem;
+        width: 10rem;
+        border: 1px solid #249c03;
+        text-transform: uppercase;
+        letter-spacing: 0.5em; }
+        #show-home #myForm #button-div div button:hover {
+          cursor: pointer; }
+      #show-home #myForm #button-div div #cancel-button {
+        background-color: white;
+        color: #249c03; }
+        #show-home #myForm #button-div div #cancel-button:hover {
+          background-color: #249c03;
+          color: white; }
+      #show-home #myForm #button-div div #save-button {
+        background-color: #249c03;
+        color: white; }
+        #show-home #myForm #button-div div #save-button:hover {
+          opacity: 0.8; }
+  #show-home #change-view {
+    position: absolute;
+    margin-top: 30px;
+    left: 15%;
+    height: 3rem;
+    width: 10rem;
+    color: white;
+    background-color: #249c03;
+    border: 1px solid #249c03;
+    font-size: large; }
+    #show-home #change-view:hover {
+      cursor: pointer;
+      background-color: white;
+      color: #249c03; }
+  #show-home .container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    left: 10%; }
+    #show-home .container .habit-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      #show-home .container .habit-container .menu a {
+        position: relative;
+        top: 90%; }
+  #show-home .daily-view {
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    #show-home .daily-view .habit-title h2 {
+      margin: 0;
+      position: relative;
+      top: 1rem;
+      font-size: 20px; }
+    #show-home .daily-view .habit-container {
+      margin-top: 10px;
+      width: 90%; }
+      #show-home .daily-view .habit-container .mark-status-daily {
+        font-size: 2rem;
+        color: #888; }
+      #show-home .daily-view .habit-container .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 10%; }
+        #show-home .daily-view .habit-container .menu a {
+          position: relative;
+          top: 0.25rem; }
+        #show-home .daily-view .habit-container .menu a:hover {
+          cursor: pointer; }
+        #show-home .daily-view .habit-container .menu .edit-form {
+          display: none;
+          position: fixed;
+          background-color: white;
+          top: 5%;
+          left: 30%;
+          height: 300px;
+          width: 600px;
+          overflow: hidden;
+          border: 1px solid black; }
+          #show-home .daily-view .habit-container .menu .edit-form #habit-display {
+            padding: 0 1.7rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; }
+            #show-home .daily-view .habit-container .menu .edit-form #habit-display div span {
+              position: relative;
+              top: 33%; }
+            #show-home .daily-view .habit-container .menu .edit-form #habit-display h3 {
+              color: #249c03; }
+          #show-home .daily-view .habit-container .menu .edit-form #close-span:hover {
+            cursor: pointer; }
+          #show-home .daily-view .habit-container .menu .edit-form #form-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center; }
+          #show-home .daily-view .habit-container .menu .edit-form .form-values {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border: 1px solid gray;
+            width: 90%;
+            height: 20%;
+            margin: 5px;
+            background-color: white;
+            text-align: left;
+            color: gray; }
+            #show-home .daily-view .habit-container .menu .edit-form .form-values div {
+              margin-top: 0.5em;
+              margin-left: 0.8em;
+              font-size: large; }
+            #show-home .daily-view .habit-container .menu .edit-form .form-values input {
+              margin-left: 0.8em;
+              outline: none;
+              border: white;
+              width: 90%;
+              height: 28px;
+              margin-top: 5px;
+              margin-bottom: 10px; }
+            #show-home .daily-view .habit-container .menu .edit-form .form-values:focus-within {
+              border: 2px solid #249c03; }
+              #show-home .daily-view .habit-container .menu .edit-form .form-values:focus-within div {
+                color: #249c03; }
+          #show-home .daily-view .habit-container .menu .edit-form #button-div {
+            border: none;
+            margin-top: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            height: 5rem; }
+            #show-home .daily-view .habit-container .menu .edit-form #button-div div button {
+              height: 3rem;
+              width: 10rem;
+              border: 1px solid #249c03;
+              text-transform: uppercase;
+              letter-spacing: 0.5em; }
+              #show-home .daily-view .habit-container .menu .edit-form #button-div div button:hover {
+                cursor: pointer; }
+            #show-home .daily-view .habit-container .menu .edit-form #button-div div #cancel-button {
+              background-color: white;
+              color: #249c03; }
+              #show-home .daily-view .habit-container .menu .edit-form #button-div div #cancel-button:hover {
+                background-color: #249c03;
+                color: white; }
+            #show-home .daily-view .habit-container .menu .edit-form #button-div div #save-button {
+              background-color: #249c03;
+              color: white; }
+              #show-home .daily-view .habit-container .menu .edit-form #button-div div #save-button:hover {
+                opacity: 0.8; }

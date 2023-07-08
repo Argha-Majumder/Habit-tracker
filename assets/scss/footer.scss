@@ -1,0 +1,32 @@
+footer {
+    position: relative;
+    bottom: 0;
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+    #footer-name {
+        font-size: 20px;
+        span {
+            position: relative;
+            top: 15px;
+        }
+    }
+    .action-button {
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                font-size: 20px;
+                margin: 0 5px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

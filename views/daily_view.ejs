@@ -1,0 +1,45 @@
+<% for (let habit of habits) { %>
+    <div class="container daily-view" style="display: none;">
+        <div class="habit-title">
+            <h2><%= habit.title %></h2>
+        </div>
+
+        <div class="habit-container">
+            <div class="mark-status-daily">
+                <%
+                    let months = ["","Jan", "Feb", "March", "Apr", "May", "June", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+                    let startDate = habit.dates[0].date;
+                    let start = months[startDate.trim(" ")[0]] +" " +startDate.substring(2);
+                %>
+                <%= start %>
+            </div>
+            <div class="menu">
+                <a class="clickIt" id="<%= habit._id%>" style="text-decoration: none;" onclick="openEditForm()">
+                    <i class="fa-solid fa-pencil fa-lg" style="color: rgb(230,120,110);"></i>
+                </a>
+                <div class="pop-up-form edit-form" id="myEditForm_<%= habit._id%>" style="display: none;">
+                    <div id="habit-display">
+                        <h3>CHANGE HABIT</h3>
+                        <div id="close-span" onclick="closeEditForm()"><span>X</span></div>
+                    </div>
+                    <br>
+                    <form action="/users/habit/edit-habit/?id=<%=habit._id%>&user=<%=locals.user%>" method="POST">
+                        <div id="form-container">
+                            <div class="form-values">
+                                <div>HABIT</div>
+                                <input type="text" name="title" value="<%=habit.title%>" required>
+                            </div>
+                            <div class="form-values" id="button-div">
+                                <div><button class="closeIt" type="reset" id="cancel-button" onclick="closeEditForm()">Cancel</button></div>
+                                <div><button type="submit" id="save-button">Change Habit</button></div>
+                            </div>  
+                        </div>
+                    </form>
+                </div>
+                <a href="/users/habit/delete-habit/?id=<%=habit._id%>" style="text-decoration: none;">
+                    <i class="fa-regular fa-trash-can fa-lg" style="color: gray"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<% } %>

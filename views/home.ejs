@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="/css/home.css">
+<div id="show-home">
+    <% if (!locals.user) { %>
+        <h1>Every day, it gets a little easier.</h1>
+        <h1>But you gotta do it every day, that's the hard part.</h1>
+        <form action="/users/sign-up" method="GET">
+            <button id="btn">Do it every day!</button>
+        </form>
+    <% } else if (locals.user && locals.habits.length == 0) { %>
+        <%= habits %>
+        <h1>Build your daily habits right now</h1>
+        <button id="btn" onclick="openForm()">Add New Habit</button>
+        <div class="pop-up-form" id="myForm">
+            <div id="habit-display">
+                <h3>NEW HABIT</h3>
+                <div onclick="closeForm()" id="close-span"><span>X</span></div>
+            </div>
+            <br>
+            <form action="/users/habit/create-habit" id="create-habit" method="POST">
+                <div id="form-container">
+                    <div class="form-values">
+                        <div>HABIT</div>
+                        <input type="text" name="title" placeholder="e.g. Coding" required>
+                    </div>
+                    <div class="form-values" id="button-div">
+                        <div><button type="reset" id="cancel-button" onclick="closeForm()">Cancel</button></div>
+                        <div><button type="submit" id="save-button">Add Habit</button></div>
+                    </div>  
+                </div>
+            </form>
+        </div>
+    <% } else { %>
+        <div>
+            <div>
+                <%- include('weekly_view'); %>
+                <%- include('daily_view'); %>
+            </div>
+            <button id="btn" onclick="openForm()">Add New Habit</button>
+            <div class="pop-up-form" id="myForm">
+                <div id="habit-display">
+                    <h3>NEW HABIT</h3>
+                    <div onclick="closeForm()" id="close-span"><span>X</span></div>
+                </div>
+                <br>
+                <form action="/users/habit/create-habit" id="create-habit" method="POST">
+                    <div id="form-container">
+                        <div class="form-values">
+                            <div>HABIT</div>
+                            <input type="text" name="title" placeholder="e.g. Coding" required>
+                        </div>
+                        <div class="form-values" id="button-div">
+                            <div><button type="reset" id="cancel-button" onclick="closeForm()">Cancel</button></div>
+                            <div><button type="submit" id="save-button">Add Habit</button></div>
+                        </div>  
+                    </div>
+                </form>
+            </div>
+            <button id="change-view" onclick="changeView()">Show Daily</button>
+        </div>
+    <% } %>
+
+</div>
+
+<script src="/js/home.js"></script>

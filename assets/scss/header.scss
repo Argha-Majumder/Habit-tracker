@@ -1,0 +1,49 @@
+header {
+    background-color: orange;
+    height: 15%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    #name {
+        margin-left: 20px;
+        img {
+            height: 50px;
+        }
+    }
+    .action-button {
+        position: absolute;
+        right: 100px;
+        ul {
+            list-style: none;
+            li {
+                display: inline;
+                font-size: 25px;
+                margin: 0 10px;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            #sign-out-button {
+                background-color: rgb(160, 156, 156);
+                padding: 10px;
+                font-size: 12px;
+                &:hover {
+                    background-color: red;
+                    cursor: pointer;
+                }
+            }
+            .sign-up-button {
+                background-color: rgb(160, 156, 156);
+                padding: 10px;
+                font-size: 1rem;
+                &:hover {
+                    background-color: green;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

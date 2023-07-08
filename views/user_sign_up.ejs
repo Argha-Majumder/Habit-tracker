@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/sign-up.css">
+<div id="sign-up-session">
+    <h1>Start doing it every day!</h1>
+
+    <form action="/users/create" method="POST">
+        <div id="form-container">
+            <div class="form-values">
+                <div>Name</div>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-values">
+                <div>Email</div>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form-values">
+                <div>Password</div>
+                <input type="password" name="password" required>
+            </div>
+            <div class="form-values">
+                <div>Confirm Password</div>
+                <input type="password" name="confirm_password" required>
+            </div>
+            <input type="submit" value="Sign Up" id="submit">
+            
+        </div>
+    </form>
+    <p>Already Registered? <a href="/users/sign-in">Sign In</a></p>
+</div>
