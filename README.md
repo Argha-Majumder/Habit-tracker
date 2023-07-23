@@ -87,3 +87,7 @@ Habit-tracker
     |-----package.json
     |
     |-----README.md
+
+## Hosting 
+
+For hosting, I use [cyclic](https://cyclic.sh) where full stack applications can be easily hosted. Just remember to change your node version depends on the node version your project is running otherwise building will fail. See my project live [here](https://aggressive-crab-tie.cyclic.app/).
